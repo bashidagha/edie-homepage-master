@@ -23,6 +23,16 @@ body {
   margin: 0 auto;
 }
 
+img {
+  max-width: 100%;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 36px;
+}
+
+/* Navabr */
 .logo {
   font-weight: 800;
   font-family: "Heebo", sans-serif;
@@ -47,7 +57,6 @@ nav {
 
 .nav__navbar ul li {
   list-style: none;
-  display: inline;
 }
 
 .nav__link {
@@ -57,15 +66,7 @@ nav {
   line-height: 36px;
 }
 
-img {
-  max-width: 100%;
-}
-
-h2 {
-  font-size: 24px;
-  line-height: 36px;
-}
-
+/* hero */
 .hero {
   margin-top: 3rem;
 }
@@ -142,6 +143,8 @@ h2 {
   background: #2d9cdb;
 }
 
+/* services */
+
 .services {
   margin-top: 5rem;
 }
@@ -209,6 +212,45 @@ h2 {
   padding: var(---padding-left);
 }
 
+/* clients */
+
+.clients {
+  padding-left: var(---padding-left);
+  padding-right: var(---padding-right);
+  margin-top: 7rem;
+}
+
+.clients__quote {
+  font-size: 24px;
+  line-height: 36px;
+  max-width: 70rem;
+}
+
+.clients__info {
+  position: relative;
+  padding-left: 9rem;
+}
+
+.clients__info h5 {
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 0;
+}
+
+.clients__info p {
+  font-size: 18px;
+  line-height: 27px;
+  color: #828282;
+}
+
+.clients img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 1.2rem;
+  position: absolute;
+  left: 0;
+}
+
 @media (min-width: 700px) {
   .nav__navbar ul {
     display: block;
@@ -220,6 +262,10 @@ h2 {
 
   .nav__navbar ul li + li {
     margin-left: 1.5rem;
+  }
+
+  .nav__navbar ul li {
+    display: inline;
   }
 
   .nav__link {
@@ -276,5 +322,6 @@ h2 {
     padding: 1rem 4rem;
     border-radius: 1.5rem;
     background-color: white;
+    min-width: 15rem;
   }
 }
