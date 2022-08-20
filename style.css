@@ -98,6 +98,7 @@ nav {
   padding-left: var(---padding-left);
   padding-right: var(---padding-right);
   max-width: 54rem;
+  margin: 1rem 0;
 }
 
 .hero__question {
