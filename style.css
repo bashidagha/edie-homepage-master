@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@800&family=Poppins:wght@400;500;700&display=swap");
-/* 
-font-family: 'Heebo', sans-serif;
-font-family: 'Poppins', sans-serif; */
+:root {
+  ---padding-left: 10%;
+}
 
 html {
   font-size: 62.5%;
@@ -24,6 +24,7 @@ body {
 
 .logo {
   font-weight: 800;
+  font-family: "Heebo", sans-serif;
   font-size: 24px;
   line-height: 35px;
 }
@@ -55,6 +56,45 @@ nav {
   line-height: 36px;
 }
 
+img {
+  max-width: 100%;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.hero {
+  margin-top: 3rem;
+}
+
+.hero img {
+  border-radius: 18px;
+  width: 100%;
+  min-height: 14rem;
+  object-fit: cover;
+}
+
+.hero p {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.hero p,
+.hero h2 {
+  padding-left: var(---padding-left);
+  width: 70%;
+}
+
+.hero__question {
+  font-size: 12px;
+  line-height: 18px;
+  color: #2d9cdb;
+  padding-left: var(---padding-left);
+}
+
 @media (max-width: 700px) {
   .nav__visible {
     display: block !important;
@@ -84,5 +124,21 @@ nav {
   .nav__link {
     font-size: 24px;
     line-height: 36px;
+  }
+
+  h2 {
+    font-size: 48px;
+    line-height: 72px;
+  }
+
+  .hero p,
+  .hero h2 {
+    padding-left: var(---padding-left);
+    width: 50%;
+  }
+
+  .hero p {
+    font-size: 18px;
+    line-height: 27px;
   }
 }
