@@ -405,6 +405,18 @@ footer .nav__link {
   font-size: 1.8rem;
 }
 
+.js-scroll {
+  opacity: 0;
+  transform: translateY(30%);
+  transition: all 500ms;
+}
+ 
+.js-scroll.scrolled {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
 @media (min-width: 700px) {
   .nav__navbar ul {
     display: block;

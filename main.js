@@ -1,3 +1,5 @@
+// Navbar
+
 let navbar = document.querySelector(".nav__navbar");
 let navToggle = navbar.querySelector(".material-icons");
 let navManu = navbar.getElementsByTagName("ul")[0];
@@ -10,23 +12,39 @@ navToggle.addEventListener("click", () => {
   }
 });
 
-// navToggle.addEventListener('click', () => {
-//     main.classList.add('invisible');
-//     fullScreenMenu.classList.add('visible');
-// })
+//Animation on Scroll
 
-// let closeMenu = document.querySelector('.menufullscreen-svg');
+const scrollOffset = 100;
 
-// let fullScreenMenu = document.querySelector('.menufullscreen');
-// let main = document.querySelector('.main');
+const scrollElement = document.querySelectorAll(".js-scroll");
 
-// navToggle.addEventListener('click', () => {
-//     main.classList.add('invisible');
-//     fullScreenMenu.classList.add('visible');
-// })
+const elementInView = (el, offset = 0) => {
+  const elementTop = el.getBoundingClientRect().top;
 
-// closeMenu.addEventListener('click', ()=>{
-//     fullScreenMenu.classList.remove('visible');
-//     main.classList.remove('invisible');
+  return (
+    elementTop <=
+    (window.innerHeight || document.documentElement.clientHeight) - offset
+  );
+};
 
-// } )
+const displayScrollElement = (element) => {
+  element.classList.add("scrolled");
+};
+
+const hideScrollElement = (element) => {
+  element.classList.remove("scrolled");
+};
+
+const handleScrollAnimation = () => {
+  scrollElement.forEach((el) => {
+    if (elementInView(el, scrollOffset)) {
+      displayScrollElement(el);
+    } else if (elementOutofView(el)) {
+      hideScrollElement(el);
+    }
+  });
+};
+
+window.addEventListener("scroll", () => {
+  handleScrollAnimation();
+});
