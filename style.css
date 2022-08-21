@@ -242,7 +242,6 @@ nav {
 
 .work img {
   border-radius: 24px;
-  max-height: 40rem;
   width: 100%;
 }
 
@@ -494,14 +493,28 @@ footer .nav__link {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 3rem;
   }
 
   .work {
-    width: 49%;
+    width: 46%;
+  }
+
+  .work + .work {
+    margin-top: 0;
   }
 
   .works h3 {
     padding: 0;
+  }
+
+  .work:nth-child(2n + 1) img {
+    margin-top: 7rem;
+  }
+
+  .work img {
+    height: 100%;
   }
 }
 
