@@ -407,7 +407,7 @@ footer .nav__link {
 
 .js-scroll {
   opacity: 0;
-  transform: translateY(30%);
+  transform: translateY(10%);
   transition: all 500ms;
 }
  
