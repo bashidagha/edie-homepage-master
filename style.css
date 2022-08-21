@@ -410,12 +410,11 @@ footer .nav__link {
   transform: translateY(10%);
   transition: all 500ms;
 }
- 
+
 .js-scroll.scrolled {
   transform: translateY(0);
   opacity: 1;
 }
-
 
 @media (min-width: 700px) {
   .nav__navbar ul {
@@ -519,6 +518,10 @@ footer .nav__link {
 
   .works h3 {
     padding: 0;
+    font-size: 36px;
+    line-height: 54px;
+    max-width: 40rem;
+    margin: 5rem 0;
   }
 
   .work:nth-child(2n + 1) img {
